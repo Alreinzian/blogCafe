@@ -28,8 +28,7 @@ body{
 /** Globals**/
 
 .container{
-    max-width:120rem;
-    width:90%;
+    width: min(90%, 120rem);
     margin: 0 auto;
 }
 
@@ -83,6 +82,9 @@ img{
     text-align: center;
     color: var(--blanco);
     margin-top: 5rem;
+}
+.barra{
+    padding-top: 4rem;
 }
 @media (min-width:768px) {
     .barra{
@@ -155,6 +157,8 @@ img{
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border:none;
+    border-radius: 5px;
 }
 @media (min-width: 768px) {
     .boton{
@@ -162,7 +166,9 @@ img{
     }
     
 }
-
+.boton:hover{
+    cursor: pointer;
+}
 .boton--primario{
     background-color: var(--negro);
 
@@ -197,3 +203,96 @@ img{
 .widget-curse_info{
     font-size: 2rem;
 }
+
+.footer{
+    background-color: var(--negro);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+/**About Us**/
+
+@media (min-width: 768px) {
+    .abooutUs{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    .aboutUs_text{
+        text-align: justify;
+    }
+}
+
+/*Course*/
+@media (min-width:768px) {
+    .course{
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+        column-gap: 2rem;
+    }
+    
+}
+
+.course{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+
+}
+.course:last-of-type{
+    border:none;
+
+}
+.course_label{
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+
+}
+.course_info{
+    font-weight: normal;
+
+}
+.course_info__text{
+    text-align: justify;
+}
+
+.course_label,
+.course_info{
+    font-size: 2rem;
+}
+   /*Contact*/
+
+.contact-bg{
+    background-image: url(../img/blog1.jpg);
+    height: 40rem;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+   }
+
+   /*Form*/
+
+.form{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+
+   }
+.campo{
+    display: flex;
+
+   }
+.campo_label{
+     flex: 0 0 9rem;
+     text-align: right;
+     padding-right: 2rem;
+
+   }
+.input_field{
+    flex:1;
+    border: 1px solid var(--gris);
+   }
+.input_textarea{
+    height: 200px;
+    margin-bottom: 2rem;
+
+   }
